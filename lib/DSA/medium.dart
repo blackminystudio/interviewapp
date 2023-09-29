@@ -26,6 +26,9 @@ void main() {
 
 // Question:
 // Story Context:
+//  Now we need to add another field named Address so we can store the user's address along with it's existing details
+//  But as we grow json data can not be directly used so we have to create a structure so that we can easily
+//  perform CRUD operations on the data using serialisation and de-serialisation.
 
 // Task:
 // Create a model where we can read and update the address of users
