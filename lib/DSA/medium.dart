@@ -2,6 +2,15 @@
 // Run cd [path_to]/interviewapp/lib/DSA.
 // Run "dart run medium.dart".
 
+// Question:
+// Story Context:
+//  Now we need to add another field named Address so we can store the user's address along with it's existing details
+//  But as we grow json data can not be directly used so we have to create a structure so that we can easily
+//  perform CRUD operations on the data using serialisation and de-serialisation.
+
+// Task:
+// Create a model where we can read and update the address of users
+
 // user data
 List<Map<String, dynamic>> users = [
   {
@@ -20,22 +29,23 @@ List<Map<String, dynamic>> users = [
     "address": {"city": "Noida", "postalCode": 110096}
   }
 ];
+
 void main() {
-  printRegions(users);
+  List<User> userList = convertToModel(users);
+  printRegions(userList);
 }
 
-// Question:
-// Story Context:
-//  Now we need to add another field named Address so we can store the user's address along with it's existing details
-//  But as we grow json data can not be directly used so we have to create a structure so that we can easily
-//  perform CRUD operations on the data using serialisation and de-serialisation.
+void printRegions(List<User> userList) {
+  for (var element in userList) {
+    // print("Regions: ${element.address.postalCode}");
+  }
+}
 
-// Task:
-// Create a model where we can read and update the address of users
-
-void printRegions(List<Map<String, dynamic>> userList) {
-  // Start writing here
-  // Don't change anything outside of the block
+List<User> convertToModel(List<Map<String, dynamic>> users) {
+  List<User> list = [];
+  // write here the code to convert json to model
+  //
+  return list;
 }
 
 // Create a model to user the map
